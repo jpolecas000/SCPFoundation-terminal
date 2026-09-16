@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>SCP Foundation Terminal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="terminal-shell">
+    <header class="status-bar">
+      <span>SITE-88 TERMINAL</span>
+      <span id="connectionStatus">[LOCAL]</span>
+      <span class="spacer"></span>
+      <span id="integrity">INTEG 100%</span>
+      <span id="timer" class="danger hidden"></span>
+    </header>
+
+    <main id="transcript" class="transcript" aria-live="polite"></main>
+
+    <div class="quick-bar" id="quickBar">
+      <button data-command="help">HELP</button>
+      <button data-command="sync">SYNC</button>
+      <button data-command="manifest">MANIFEST</button>
+      <button data-command="random">RANDOM</button>
+      <button data-command="status">STATUS</button>
+      <button data-command="clear">CLEAR</button>
+    </div>
+
+    <form id="inputForm" class="input-bar">
+      <span id="prompt">.</span>
+      <input id="commandInput" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Terminal command">
+      <span id="caret">|</span>
+    </form>
+  </div>
+
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
